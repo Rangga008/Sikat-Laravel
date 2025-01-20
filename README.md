@@ -1,3 +1,4 @@
+
 # Sikat
 ![Contoh Gambar](public/img/logo2.jpg)
 Aplikasi ini adalah sistem dashboard penjualan yang dibangun menggunakan Laravel. Aplikasi ini memungkinkan pengguna untuk mencari produk, mengurutkan berdasarkan popularitas atau harga, dan menambahkan produk ke keranjang belanja.
@@ -14,6 +15,7 @@ Sebelum memulai, pastikan Anda memiliki hal-hal berikut:
 - **PHP** ≥ 8.2
 - **Composer**
 - **Laravel** ≥ 11.x
+- **Node.js** dan **npm** (untuk mengelola dependensi frontend)
 - **Database** (MySQL, SQLite, dll.)
 
 ## Instalasi
@@ -32,7 +34,7 @@ Pindah ke direktori proyek:
 cd repo-name
 ```
 
-### 3. Instal Dependensi
+### 3. Instal Dependensi Backend
 Instal dependensi menggunakan Composer:
 ```bash
 composer install
@@ -45,13 +47,30 @@ cp .env.example .env
 ```
 Kemudian, buka file `.env` dan sesuaikan pengaturan database dan konfigurasi lainnya sesuai kebutuhan Anda.
 
-### 5. Generate Kunci Aplikasi
+### 5. Instal Dependensi Frontend
+Pindah ke direktori proyek dan instal dependensi frontend menggunakan npm:
+```bash
+npm install
+```
+
+### 6. Compile Assets Frontend
+Setelah instalasi, kompilasi aset frontend menggunakan salah satu perintah berikut:
+- Untuk mode pengembangan:
+  ```bash
+  npm run dev
+  ```
+- Untuk mode produksi:
+  ```bash
+  npm run build
+  ```
+
+### 7. Generate Kunci Aplikasi
 Jalankan perintah berikut untuk menghasilkan kunci aplikasi:
 ```bash
 php artisan key:generate
 ```
 
-### 6. Migrasi Database
+### 8. Migrasi Database
 Jalankan migrasi untuk membuat tabel yang diperlukan di database:
 ```bash
 php artisan migrate
@@ -61,14 +80,14 @@ Jika Anda memiliki seeder, Anda dapat menjalankannya dengan:
 php artisan db:seed
 ```
 
-### 7. Buat Symlink untuk Storage
+### 9. Buat Symlink untuk Storage
 Jalankan perintah berikut untuk membuat symlink dari direktori `storage` ke `public`:
 ```bash
 php artisan storage:link
 ```
 Perintah ini akan membuat tautan simbolis yang memungkinkan Anda mengakses file yang disimpan di direktori `storage/app/public` melalui URL publik.
 
-### 8. Jalankan Server
+### 10. Jalankan Server
 Jalankan server pengembangan Laravel:
 ```bash
 php artisan serve
@@ -106,4 +125,4 @@ Jika Anda ingin berkontribusi pada proyek ini, silakan buat fork repositori ini 
 
 ## Lisensi
 Proyek ini dilisensikan di bawah [MIT License](LICENSE).
-
+```
