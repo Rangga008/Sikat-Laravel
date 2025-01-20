@@ -1,5 +1,5 @@
 # Sikat
-![Contoh Gambar](assets/logo2.jpg)
+![Contoh Gambar](public/img/logo2.jpg)
 Aplikasi ini adalah sistem dashboard penjualan yang dibangun menggunakan Laravel. Aplikasi ini memungkinkan pengguna untuk mencari produk, mengurutkan berdasarkan popularitas atau harga, dan menambahkan produk ke keranjang belanja.
 
 ## Fitur
